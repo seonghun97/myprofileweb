@@ -24,7 +24,11 @@
 		INSERT INTO web_board(bnum, bid, bname, bcontent, bemail) VALUES (webboard_seq.nextval, #{param1},#{param2},#{param3}, #{param4})
 	</insert>
 	<select id="questionListDao" resultType="com.psh.home.dto.BoardDto">
-		SELECT * FROM web_board ORDER BY bnum DESC
+		SELECT * FROM
+			(SELECT A.*, ((ROWNUM-1)/#{amount}+1)PAGE, ROWNUM
+			 	FROM 
+			 		(SELECT * FROM web_board ORDER BY bnum DESC)A)
+			 			WHERE PAGE=#{pageNum}
 	</select>
 	<select id="contentViewDao" resultType="com.psh.home.dto.BoardDto">
 		SELECT * FROM web_board WHERE bnum =#{param1}
