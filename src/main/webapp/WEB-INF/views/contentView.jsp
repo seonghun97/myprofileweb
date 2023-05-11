@@ -34,23 +34,27 @@
 		  							<form action="questionOk" method="post"> 
 		  							<tr>
 		  								<td class="content_text">아 이 디 : </td>
-		  								<td><input class="inputbox01" type="text" name="bid" value="${memberDto.mid }" readonly="readonly"></td>
+		  								<td><input class="inputbox01" type="text" name="bid" value="${boardDto.bid }" readonly="readonly"></td>
 		  							</tr>
 		  							<tr>
 		  								<td class="content_text">글 쓴 이 :</td>
-		  								<td><input class="inputbox01" type="text" name="bname" value="${memberDto.mname }"></td>
+		  								<td><input class="inputbox01" type="text" name="bname" value="${boardDto.bname }" readonly="readonly"></td>
 		  							</tr>
 		  							<tr>
 		  								<td class="content_text">질문내용 : </td>
-		  								<td><textarea class = "textareabox" rows="8" cols="30" name="bcontent"></textarea></td>
+		  								<td><textarea class = "textareabox" rows="8" cols="30" name="bcontent" readonly="readonly">${boardDto.bcontent }</textarea></td>
 		  							</tr>
 		  							<tr>
 		  								<td class="content_text">이 메 일 :</td>
-		  								<td><input class="inputbox01" type="text" name="bemail" value="${memberDto.memail}" ></td>
+		  								<td><input class="inputbox01" type="text" name="bemail" value="${boardDto.bemail}" readonly="readonly"></td>
+		  							</tr>
+		  							<tr>
+		  								<td class="content_text">등 록 일 :</td>
+		  								<td><input class="inputbox01" type="text" name="bemail" value="${boardDto.bdate}" readonly="readonly"></td>
 		  							</tr>
 		  							<tr>
 		  								<td colspan="2" align="center">
-		  									<input class = "content_btn01" type="submit" value="질문하기">&nbsp;&nbsp;
+		  									<input class = "content_btn01" type="button" value="삭제하기" onclick="script:window.location.href='delete?bnum=${boardDto.bnum}'">&nbsp;&nbsp;
 		  									<input class = "content_btn01" type="button" value="글목록" onclick="script:window.location.href='list'">
 		  								</td>
 		  							</tr>

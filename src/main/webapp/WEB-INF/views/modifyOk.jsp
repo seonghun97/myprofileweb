@@ -59,7 +59,7 @@
 									<tr>
 										<td colspan="2" align="center">
 											<input class="content_btn01" type="button" value="정보수정" onclick="script:window.location.href='modify'">&nbsp;&nbsp;
-											<input class="content_btn01" type="button" value="수정취소" onclick="script:window.location.href='index'">
+											<input class="content_btn01" type="button" value="홈으로" onclick="script:window.location.href='index'">
 										</td>										
 									</tr>
 									
