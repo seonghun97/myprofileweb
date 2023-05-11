@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+}
+span.title01{
+	font-size: 70px;
+	color: #005B8C;
+	font-family: Arial;
+	font-weight: bold;
+}
+span.title02{
+	font-size: 20px;
+	color: #66caff;
+	font-family: Arial;
+	font-weight: normal;
+}
+span.skilltext01{
+	font-size: 60px;
+	color: #00659b;
+	font-family: Arial;
+	font-weight: bold;
+}
+span.skilltext02{
+	font-size: 40px;
+	color: #8ad7ff;
+	font-family: Arial;
+	font-weight: bold;
+}
+td.titlebox{
+	text-align: center;
+}
+td.skillbox{
+	background-color: #c1f1ff;
+}
+td.imgbox{
+	text-align :center;
+	background-color: #007293;
+}
+img.img{
+	width:100%;
+	height:100%;
+}
