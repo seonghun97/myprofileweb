@@ -34,7 +34,7 @@ public class PageDto {
 		//실제 끝 페이지 계산( 총 글의수 /한페이지당 출력될 글의 수 -> 올림한 정수 )
 		//글의 52개면 52/5 = 10.4 > 올림 11로 변환한 값이 실제 끝 페이지수가 됨
 		
-		if(realEndPage > this.endPage) {
+		if(realEndPage < this.endPage) {
 			this.endPage = realEndPage;
 		}// 처음 계산한 마지막 페이지의 값인 endpage 값보다 realendpage값이 작게나오면
 		//그값으로 대신해야 실제 마지막 페이지 값이 마지막 페이지 번호로 출력됨
